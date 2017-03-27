@@ -12,4 +12,5 @@
 ## 2.上传这两个文件到NodeMcu  
 ## 3.访问www.McuNode.com连接  
 
-![image](https://raw.githubusercontent.com/IoTServ/McuNode/master/file-edit.png)
+![image](https://raw.githubusercontent.com/IoTServ/McuNode/master/file-edit.png)  
+![image](https://raw.githubusercontent.com/IoTServ/McuNode/master/mcunode%20release.png)  
