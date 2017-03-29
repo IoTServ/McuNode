@@ -1,5 +1,5 @@
 dofile('cmd.lua')
-id="4567" --you can set your id by youself!!!!!!
+id="yourid" --you can set your id by youself!!!!!!
 function startServer()
 print(wifi.sta.getip())
 sk=net.createConnection(net.TCP, 0)
@@ -25,7 +25,7 @@ sk:on("disconnection",function(conn,c)
 sk:connect(8001,"www.mcunode.com")
 end
 wifi.setmode(wifi.STATION)
-wifi.sta.config("wifi","123456abc")    --set your ap info !!!!!!
+wifi.sta.config("wifissid","wifipassword")    --set your ap info !!!!!!
 wifi.sta.autoconnect(1)
 tmr.alarm(1, 1000, 1, function() 
    if wifi.sta.getip()==nil then
