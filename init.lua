@@ -3,12 +3,11 @@ id="yourid" --you can set your id by youself!!!!!!
 function startServer()
 print(wifi.sta.getip())
 sk=net.createConnection(net.TCP, 0)
-
 sk:on("receive", function(sck, c) node.input(c) end )   --print(c)
-
 sk:on("connection", function(sck, c) 
 print(c)
 sk:send(id)
+tmr.alarm(2, 30000, 1, function() print(' ') end)	--by yourself		
 function s_output(str)
          if (sk~=nil and str~='')    then
             sk:send(str)
