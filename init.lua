@@ -7,7 +7,7 @@ sk:on("receive", function(sck, c) node.input(c) end )   --print(c)
 sk:on("connection", function(sck, c) 
 print(c)
 sk:send(id)
-tmr.alarm(2, 30000, 1, function() print(' ') end)	--by yourself		
+tmr.alarm(2, 100000, 1, function() print(' ') end)	--by yourself		
 function s_output(str)
          if (sk~=nil and str~='')    then
             sk:send(str)
