@@ -47,7 +47,12 @@ sk:on("disconnection",function(conn,c)
 sk:connect(8001,ip)
 end
 wifi.setmode(wifi.STATION)
-wifi.sta.config(ssid,ssidpwd)    --set your ap info !!!!!!
+station_cfg={}
+station_cfg.ssid=ssid
+station_cfg.pwd=pwd
+station_cfg.save=false
+station_cfg.auto=true	
+wifi.sta.config(station_cfg)   --set your ap info !!!!!!
 wifi.sta.autoconnect(1)
 tmr.alarm(1, 1000, 1, function() 
    if wifi.sta.getip()==nil then
